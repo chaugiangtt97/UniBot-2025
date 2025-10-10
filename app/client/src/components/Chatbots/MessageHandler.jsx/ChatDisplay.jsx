@@ -136,7 +136,7 @@ function ChatDisplay({ loading = null, action = null, user = null , conservation
               maxWidth: { xs: '100%', md: '70%' }
             }}>
             { typeof conservation?.anwser === "string" && <ReactMarkdown>
-              Chào bạn! Để tôi có thể hỗ trợ bạn một cách tốt nhất, bạn vui lòng cho tôi biết bạn đang quan tâm đến thông tin nào trong các chủ đề dưới đây nhé !
+              Hello! To assist you in the best possible way, could you please let me know which topic you’re interested in from the list below?
             </ReactMarkdown> }
             <BubbleLeft xs = {{ display: { xs: 'none', md: 'block' } }}/>
 
@@ -149,7 +149,7 @@ function ChatDisplay({ loading = null, action = null, user = null , conservation
                 })}
               </Box>
               <Box sx = {{ width: '100%', display: 'flex' , justifyContent: 'end', alignItems: 'center'}}>
-                <Button startIcon={<CloseIcon/>} color='error' sx = {{ fontSize: { xs: '0.725rem !important', md: '1.225rem !important' } }}>Thoát Cuộc Trò Chuyện</Button>
+                <Button startIcon={<CloseIcon/>} color='error' sx = {{ fontSize: { xs: '0.725rem !important', md: '1.225rem !important' } }}>Exit</Button>
               </Box>
             </Box>
 
@@ -280,8 +280,8 @@ function FeedbackModal({
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => modalHandler?.action(value) && modalHandler?.close()} sx = {{ color: '#000' }}>Xác Nhận</Button>
-          <Button onClick={modalHandler?.close} sx = {{ color: 'red' }}> Đóng</Button>
+          <Button onClick={() => modalHandler?.action(value) && modalHandler?.close()} sx = {{ color: '#000' }}>Confirm</Button>
+          <Button onClick={modalHandler?.close} sx = {{ color: 'red' }}> Close</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>

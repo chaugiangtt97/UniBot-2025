@@ -86,7 +86,7 @@ function VerifyEmail() {
 
           <Button type="submit" fullWidth variant="contained" onClick={validateInputs}
             sx={{ background: theme => theme.palette.primary.main, '&:hover': { boxShadow: 'var(--mui-shadows-4)' } }} >
-            Xác Nhận </Button>
+            Confirm </Button>
 
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <Typography sx={{ textAlign: 'center' }}>
