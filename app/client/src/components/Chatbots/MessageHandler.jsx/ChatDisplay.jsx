@@ -198,7 +198,7 @@ function ChatDisplay({ loading = null, action = null, user = null , conservation
             <Box sx = {{  width: '100%', borderTop: '1px solid #000', marginTop: 1, paddingTop: 1 }}>
               <Box sx = {{  display: 'flex', flexWrap: 'wrap', gap: 1, rowGap: '4px', alignItems: 'center' }}>
                 <Typography sx = {{ fontSize: {xs: '0.825rem', xl: '1.325rem' }, fontWeight: '500' }}>References: </Typography>
-                {source.length > 0 && source.map((data, zIndex) => {
+                {sources.length > 0 && sources.map((data, zIndex) => {
                   return <Box key = {zIndex*12650} sx = {ModelButton_Style}
                     onClick = {() => { setOpenDetail(true); setContent(<a href={data?.url} target="_blank" rel="noopener noreferrer" style={{color: '#000', textWrap: 'auto'}}>{data?.url}</a>)  } } > { zIndex + 1 } </Box>
                 })}
@@ -238,7 +238,7 @@ function ChatDisplay({ loading = null, action = null, user = null , conservation
 
             <Box sx = {{  width: '100%', borderTop: '1px solid #000', marginTop: 1, paddingTop: 1 }}>
               <Box sx = {{  display: 'flex', flexWrap: 'wrap', gap: 1, paddingBottom: 1, rowGap: '4px' }}>
-                {source.length > 0 && source.map((data, zIndex) => {
+                {sources.length > 0 && sources.map((data, zIndex) => {
                   return <Box key = {zIndex*12650} sx = {ModelButton_Style}
                     onClick = {() => { setOpenDetail(true); setContent(<a href={data?.url} target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>{data?.url}</a>)  } } > {useCode(data?.collection_name)} </Box>
                 })}
