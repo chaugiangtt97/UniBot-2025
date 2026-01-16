@@ -82,6 +82,30 @@ function ChatDisplay({ loading = null, action = null, user = null , conservation
     setValue(value)
   }
 
+  const sources = React.useMemo(() => {
+  const s = conservation?.source;
+
+  // Case 1: đúng kiểu array
+  if (Array.isArray(s)) return s;
+
+  // Case 2: backend trả 1 object đơn lẻ -> bọc thành array
+  if (s && typeof s === 'object') return [s];
+
+  // Case 3: backend trả string (có thể là JSON string)
+  if (typeof s === 'string') {
+    try {
+      const parsed = JSON.parse(s);
+      if (Array.isArray(parsed)) return parsed;
+      if (parsed && typeof parsed === 'object') return [parsed];
+    } catch (e) {
+      // không parse được -> coi như không có source
+    }
+  }
+
+  // Default
+  return [];
+}, [conservation?.source]);
+
   return loading ? (
     <Box sx = {ChatBlock_Style}>
       {['',''].map(( _data, index) => ( <FadeIn key = {1793*index}>
@@ -174,7 +198,7 @@ function ChatDisplay({ loading = null, action = null, user = null , conservation
             <Box sx = {{  width: '100%', borderTop: '1px solid #000', marginTop: 1, paddingTop: 1 }}>
               <Box sx = {{  display: 'flex', flexWrap: 'wrap', gap: 1, rowGap: '4px', alignItems: 'center' }}>
                 <Typography sx = {{ fontSize: {xs: '0.825rem', xl: '1.325rem' }, fontWeight: '500' }}>References: </Typography>
-                {conservation?.source && conservation?.source.map((data, zIndex) => {
+                {source.length > 0 && source.map((data, zIndex) => {
                   return <Box key = {zIndex*12650} sx = {ModelButton_Style}
                     onClick = {() => { setOpenDetail(true); setContent(<a href={data?.url} target="_blank" rel="noopener noreferrer" style={{color: '#000', textWrap: 'auto'}}>{data?.url}</a>)  } } > { zIndex + 1 } </Box>
                 })}
@@ -214,7 +238,7 @@ function ChatDisplay({ loading = null, action = null, user = null , conservation
 
             <Box sx = {{  width: '100%', borderTop: '1px solid #000', marginTop: 1, paddingTop: 1 }}>
               <Box sx = {{  display: 'flex', flexWrap: 'wrap', gap: 1, paddingBottom: 1, rowGap: '4px' }}>
-                {conservation?.source && conservation?.source.map((data, zIndex) => {
+                {source.length > 0 && source.map((data, zIndex) => {
                   return <Box key = {zIndex*12650} sx = {ModelButton_Style}
                     onClick = {() => { setOpenDetail(true); setContent(<a href={data?.url} target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>{data?.url}</a>)  } } > {useCode(data?.collection_name)} </Box>
                 })}

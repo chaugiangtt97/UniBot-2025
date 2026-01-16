@@ -176,7 +176,7 @@ export function ChatGenerator() {
   const { dashboard, processHandler, noticeHandler  } = useOutletContext();
   
   useEffect(() => {
-    document.title = 'Chatbot - Trò chuyện';
+    document.title = 'Chatbot - Unibot';
     dashboard.navigate.active(466)
     
     return () => (

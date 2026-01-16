@@ -160,7 +160,7 @@ export function ChatGenerator() {
 
   useEffect(() => {
 
-    document.title = 'Chatbot - Trò Chuyện'
+    document.title = 'Chatbot - Unibot'
     mainLayout.navigate(121)
 
     ChatWithChatbot.userMessage(socket, (data) => {
