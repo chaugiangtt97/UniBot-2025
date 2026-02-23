@@ -261,7 +261,7 @@
   "assistant_offer_help": "Comment puis-je vous aider aujourd'hui ?",
 
   "chat_list": "Liste des conversations",
-  "start_new_chat": "Commencer une nouvelle conversation",
+  "start_new_chat": "Nouveau chat",
   "no_conversations": "Aucune conversation",
   "enter_conversation_name": "Veuillez saisir le nom de la conversation !",
   "create_session_title": "Créer de nouvelles sessions",
@@ -664,7 +664,7 @@
   "timetable": "Consultation de l'emploi du temps",
   "Chapter_0_and_1": "Informations générales",
   "Chapter_2": "Concepts fondamentaux",
-  "Chapter_3": "Chapitre 3 : Études de cas",
+  "Chapter_3": "Études de cas",
   "events": "Informations sur les événements",
   "academic_affairs": "Règlements scolaires",
   "scholarship": "Politiques de bourses",
@@ -689,6 +689,6 @@
   "last_updated": "Dernière mise à jour le",
 
   "mainlayout": {
-    "logout_noti": "Bạn Thật Sự Muốn Đăng Xuất Sao (Tiếng anh) ☹️"
+    "logout_noti": "Voulez-vous vraiment vous déconnecter ? ☹️"
   }
 }
