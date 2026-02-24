@@ -13,9 +13,8 @@ export const handleError = (res = {}, err = {}) => {
   console.log(err)
 
 
-  res.status(err?.code || 404).json({
-    errors: err
-  })
-}
+  if (res.headersSent) return;
+  res.status(err?.code || 404).json({ errors: err })
+  }
 
 export default handleError
