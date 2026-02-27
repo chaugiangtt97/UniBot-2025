@@ -142,13 +142,13 @@ function SignIn() {
           </FormControl>
 
           <FormControl sx={{ gap: 1 }}>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-              <FormLabel htmlFor="password" sx={{ color: 'inherit' }}>{t("login_page.password_label")}</FormLabel>
-              <Link variant="body2"
-                onClick={() => navigate(`/email/request-verification`)} // href={import.meta.env.VITE_ENVIRONMENT ? `/${import.meta.env.VITE_ENVIRONMENT}/forgotPassword/request-verification` : `/forgotPassword/request-verification`}
-                sx={{ alignSelf: 'baseline', color: 'inherit' }}>
-                {t("login_page.forgot_password_title")} </Link>
-            </Box>
+{/*             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}> */}
+{/*               <FormLabel htmlFor="password" sx={{ color: 'inherit' }}>{t("login_page.password_label")}</FormLabel> */}
+{/*               <Link variant="body2" */}
+{/*                 onClick={() => navigate(`/email/request-verification`)} // href={import.meta.env.VITE_ENVIRONMENT ? `/${import.meta.env.VITE_ENVIRONMENT}/forgotPassword/request-verification` : `/forgotPassword/request-verification`} */}
+{/*                 sx={{ alignSelf: 'baseline', color: 'inherit' }}> */}
+{/*                 {t("login_page.forgot_password_title")} </Link> */}
+{/*             </Box> */}
             <TextInput name="password" placeholder={t("login_page.placeholder_password")} type="password" id="password"
               autoComplete="current-password" required fullWidth variant="outlined" inputProps={{ maxLength: 40 }}
               sx={{ color: '#000' }} />
@@ -175,17 +175,17 @@ function SignIn() {
                 </Link>
               </span>
             </Typography>
-            <Typography sx={{ textAlign: 'center' }}>
-              <span>
-                <Link
-                  onClick={handleVerifyEmail}
-                  variant="body2"
-                  sx={{ alignSelf: 'center', cursor: 'pointer' }}
-                >
-                  {t("login_page.request_verification")}{/* Yêu Cầu Xác Minh Tài Khoản ! */}
-                </Link>
-              </span>
-            </Typography>
+{/*             <Typography sx={{ textAlign: 'center' }}> */}
+{/*               <span> */}
+{/*                 <Link */}
+{/*                   onClick={handleVerifyEmail} */}
+{/*                   variant="body2" */}
+{/*                   sx={{ alignSelf: 'center', cursor: 'pointer' }} */}
+{/*                 > */}
+{/*                   {t("login_page.request_verification")} */}{/* Yêu Cầu Xác Minh Tài Khoản ! */}
+{/*                 </Link> */}
+{/*               </span> */}
+{/*             </Typography> */}
           </Box>
 
           {reducers_data?.captchaToken && <Box sx={{ display: 'flex', justifyContent: 'end' }}>

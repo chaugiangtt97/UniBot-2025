@@ -3,7 +3,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-xhr-backend";
 import { initReactI18next } from "react-i18next";
 
-const fallbackLng = ["en"];
+const fallbackLng = ["fr"];
 
 i18n
   .use(Backend) // used to load data from othe directory
@@ -12,7 +12,9 @@ i18n
   .init({
     fallbackLng, // default language
     detection: {
-      checkWhitelist: true,
+        order: ["localStorage", "cookie", "navigator"],
+        caches: ["localStorage"],
+        checkWhitelist: true,
     },
     backend: {
       // Đổi tại đây:

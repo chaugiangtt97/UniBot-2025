@@ -37,7 +37,7 @@
   },
 
   "students_register_page": {
-    "heading": "Inscription des étudiants",
+    "heading": "Créez votre compte",
     "name_label": "Nom du compte",
     "name_placeholder": "Votre nom",
     "student_register_email_label": "Nom de connexion (Gmail personnel)",
@@ -55,7 +55,7 @@
     "batch_required": "La promotion ne peut pas être vide !",
     "program_required": "Le programme de formation ne peut pas être vide !",
     "notice": {
-      "register_success": "Vous vous êtes inscrit avec succès. Veuillez vérifier votre compte via l'email de confirmation.",
+      "register_success": "Vous vous êtes inscrit avec succès. Vous pouvez vous connecter maintenant.",
       "email_invalid": "Veuillez saisir un email valide !",
       "captcha_required": "Veuillez vérifier le captcha !",
       "password_min_length": "Le mot de passe doit comporter au moins 6 caractères !"

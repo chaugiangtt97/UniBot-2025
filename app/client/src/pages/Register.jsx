@@ -252,19 +252,19 @@ function Register() {
                 </Link>
               </span>
             </Typography>
-            <Typography sx={{ textAlign: 'center' }}>
-              <span>
-                <Link
-                  // href="/register/lecturer"
-                  onClick={() => navigate(`/register/lecturer`)}
-                  variant="body2"
-                  sx={{ alignSelf: 'center' }}
-                >
-                  {t("students_register_page.lecturer_register_prompt")}
-                  {/* Bạn là giảng viên FIT-HCMUS? */}
-                </Link>
-              </span>
-            </Typography>
+{/*             <Typography sx={{ textAlign: 'center' }}> */}
+{/*               <span> */}
+{/*                 <Link */}
+{/*                   // href="/register/lecturer" */}
+{/*                   onClick={() => navigate(`/register/lecturer`)} */}
+{/*                   variant="body2" */}
+{/*                   sx={{ alignSelf: 'center' }} */}
+{/*                 > */}
+{/*                   {t("students_register_page.lecturer_register_prompt")} */}
+{/*                    */}{/* Bạn là giảng viên FIT-HCMUS? */}
+{/*                 </Link> */}
+{/*               </span> */}
+{/*             </Typography> */}
           </Box>
 
 

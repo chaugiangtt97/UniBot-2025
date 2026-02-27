@@ -38,7 +38,7 @@
   },
 
   "students_register_page": {
-    "heading": "Students Register",
+    "heading": "Account Register",
     "name_label": "Account Name",
     "name_placeholder": "Your name",
     "student_register_email_label": "Login Name (Personal Email)",
@@ -57,7 +57,7 @@
     "program_required": "Training program cannot be empty!",
 
     "notice": {
-      "register_success": "You’ve successfully signed up. Please verify your account via the confirmation email.",
+      "register_success": "You’ve successfully signed up. You can log in now.",
       "email_invalid": "Please enter a valid email!",
       "captcha_required": "Please verify the captcha!",
       "password_min_length": "Password must be at least 6 characters!"

@@ -4,7 +4,7 @@ import Link from '@mui/material/Link';
 import React, { useRef, useState } from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { useErrorMessage } from '~/hooks/useMessage';
-
+import { useTranslation } from "react-i18next";
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useSelector } from 'react-redux';
 import { useApi } from '~/apis/apiRoute';
@@ -86,7 +86,7 @@ function ForgotPasswords() {
       .then(() => {
         processHandler.remove('#verifyEmail', verifyEmailEvent)
         setNotificationSuccess(t("forgot_password.notice.email_sent_check")) //'Gởi Yêu Câu Trong Giây Lát, Kiểm Tra Email Của Bạn !'
-        setNotification()
+        setNotification(null)
         navigate(`/password/reset-password`, { state: { email: email.value } })
       })
       .catch((err) => {
